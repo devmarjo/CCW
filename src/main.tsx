@@ -1,0 +1,10 @@
+import './demo.css';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { CurrencyConverterWidget, resolveLanguage } from './index';
+import { messages } from './i18n';
+const lang = resolveLanguage();
+const t = messages[lang];
+document.documentElement.lang = lang;
+document.title = 'CurrencyConverterWidget — Demo';
+createRoot(document.getElementById('root')!).render(<React.StrictMode><main className="demo"><nav><a href="#">CCW<span> / CurrencyConverterWidget</span></a><span>{t.demo}</span></nav><CurrencyConverterWidget lang={lang} persist storageKey="ccw:demo:v1"/><div className="demo-bottom">{t.tagline}</div></main></React.StrictMode>);

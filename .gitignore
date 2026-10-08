@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-widget/
+coverage/
+.DS_Store
+*.local
+.code-workspace

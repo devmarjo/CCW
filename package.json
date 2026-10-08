@@ -1,0 +1,50 @@
+{
+  "name": "currency-converter-widget",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Responsive React currency converter powered by Frankfurter v2",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "build:widget": "vite build --config vite.lib.config.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm test && npm run build && npm run build:widget"
+  },
+  "main": "./dist-widget/currency-converter-widget.js",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./dist-widget/currency-converter-widget.js"
+    },
+    "./style.css": "./dist-widget/currency-converter-widget.css"
+  },
+  "files": [
+    "dist-widget",
+    "src"
+  ],
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "jsdom": "^26.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.3.7",
+    "vitest": "^5.0.3"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
